@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: #fc4747;
+  --color-verydark-blue: #10141e;
+  --color-dark-dark-blue: #161d2f;
+  --color-light-blue: #5a698f;
+}
+
+@theme {
+  --color-softRed: yellow;
+}
+
+//black background overlay
+.black-gradient-overlay {
+  @apply w-1/2;
+}

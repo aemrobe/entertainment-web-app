@@ -6,15 +6,70 @@
   --color-white: #fff;
   --color-red: #fc4747;
   --color-verydark-blue: #10141e;
-  --color-dark-dark-blue: #161d2f;
+  --color-dark-blue: #161d2f;
   --color-light-blue: #5a698f;
+
+  /* Font Family */
+  --font-ff-outfit: "Outfit", sans-serif;
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-700: 56px;
+  --space-900: 72px;
+  --space-1000: 80px;
 }
 
 @theme {
-  --color-softRed: yellow;
+  /* Colors */
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
+  --color-softRed: var(--color-red);
+  --color-varyDarkBlue: var(--color-verydark-blue);
+  --color-darkBlue: var(--color-dark-blue);
+  --color-lightBlue: var(--color-light-blue);
+
+  /* Font Family */
+  --font-sans: var(--font-ff-outfit);
+
+  /* Spacing */
+  --spacing-0: var(--space-0);
+  --spacing-100: var(--space-100);
+  --spacing-200: var(--space-200);
+  --spacing-300: var(--space-300);
+  --spacing-400: var(--space-400);
+  --spacing-500: var(--space-500);
+  --spacing-700: var(--space-700);
+  --spacing-900: var(--space-900);
+  --spacing-1000: var(--space-1000);
+
+  /* Breakpoint */
+  --breakpoint-xs: 375px;
 }
 
-//black background overlay
+/*black background overlay*/
 .black-gradient-overlay {
-  @apply w-1/2;
+  @apply bg-linear-180 from-black/0 to-black/70 h-64;
+}
+
+/* Bullet point */
+.bullet-point::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.trending-movie-img {
+}
+
+body {
+  @apply bg-varyDarkBlue font-light leading-tight;
 }

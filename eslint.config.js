@@ -72,6 +72,8 @@ export default [
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
 
+      "react/prop-types": "off", // Disable the rule of prop types
+
       //your preference rules:
       "no-unused-vars": "warn", //warn about unused variables
       "no-undef": "error",

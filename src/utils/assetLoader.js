@@ -3,7 +3,7 @@
 // and values are the public URLs of the assets.
 const allImages = import.meta.glob(
   "../assets/thumbnails/**/*.{jpg,jpeg,png,gif}",
-  { eager: true, as: "url" }
+  { eager: true, query: "?url", import: "default" }
 );
 
 /**

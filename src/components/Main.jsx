@@ -1,11 +1,6 @@
-import SearchBox from "./SearchBox";
-
 function Main({ children }) {
   return (
-    <main className="text-white px-200 overflow-x-hidden ">
-      <SearchBox />
-      {children}
-    </main>
+    <main className="container mx-auto text-white  pb-[13px]">{children}</main>
   );
 }
 

@@ -1,25 +1,27 @@
 import SearchBox from "../components/SearchBox";
-import TrendingSection from "../components/TrendingSection";
 import VideoList from "../components/VideoList";
 import { useMovie } from "../Context/MovieContext";
 
-function Homepage() {
+function TvSeriesPage() {
   const { movieData, searchQuery } = useMovie();
+
+  const tvSeriesCategoriesOnly = movieData.filter(
+    (movie) => movie.category === "TV Series"
+  );
 
   const searchedMovies =
     searchQuery.length > 0
-      ? movieData.filter((movie) =>
+      ? tvSeriesCategoriesOnly.filter((movie) =>
           movie.title.toLowerCase().includes(searchQuery.toLowerCase())
         )
-      : movieData;
+      : tvSeriesCategoriesOnly;
 
   return (
     <>
       <SearchBox />
-      {searchQuery.length === 0 && <TrendingSection />}
-      <VideoList title={"Recommended for you"} movieData={searchedMovies} />
+      <VideoList title={"TV Series"} movieData={searchedMovies} />
     </>
   );
 }
 
-export default Homepage;
+export default TvSeriesPage;

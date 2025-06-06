@@ -49,11 +49,23 @@
 
   /* Breakpoint */
   --breakpoint-xs: 375px;
+  --breakpoint-2xl: 1440px;
 }
 
 /*black background overlay*/
 .black-gradient-overlay {
   @apply bg-linear-180 from-black/0 to-black/70 h-64;
+}
+
+/* Hiding the horizontal scroll bar */
+.custom-scrollbar-hide {
+  -ms-overflow-style: none; /*IE and Edge*/
+  scrollbar-width: none; /*Firefox*/
+}
+
+/*For Chrome, Safari and Opera*/
+.custom-scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Bullet point */

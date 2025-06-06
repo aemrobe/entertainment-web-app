@@ -1,8 +1,8 @@
 // Use import.meta.glob to import all images matching the pattern.
-// This will create an object where keys are paths like './src/assets/thumbnails/...'
+// This will create an object where keys are paths like '../assets/thumbnails/...'
 // and values are the public URLs of the assets.
 const allImages = import.meta.glob(
-  "../src/assets/thumbnails/**/*.{jpg,jpeg,png,gif}",
+  "../assets/thumbnails/**/*.{jpg,jpeg,png,gif}",
   { eager: true, as: "url" }
 );
 
@@ -14,13 +14,10 @@ const allImages = import.meta.glob(
  * @returns {string} The public URL of the image, or an empty string if not found.
  */
 export function getImageUrl(jsonPath) {
-  // Your JSON paths start with './assets/'.
-  // The keys in 'allImages' (from import.meta.glob) start with './src/assets/'.
+  // The keys in 'allImages' (from import.meta.glob) start with '../assets/'.
   // We need to transform the JSON path to match the glob key.
-  // Example: './assets/thumbnails/beyond-earth/trending/small.jpg'
-  const viteGlobKey = `./src/${jsonPath.substring(2)}`; // Remove './' and prepend './src/'
-
-  console.log(allImages);
+  // Example: './assets/thumbnails/beyond-earth/trending/small.jpg to ../assets/thumbnails/beyond-earth/trending/small.jpg'
+  const viteGlobKey = `../${jsonPath.substring(2)}`; // Remove './' and prepend '../'
 
   // Return the URL if found, otherwise an empty string or a placeholder
   return allImages[viteGlobKey] || "";

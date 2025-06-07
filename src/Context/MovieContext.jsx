@@ -1,10 +1,10 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import movieDataJson from "../assets/data.json";
-import { getImageUrl } from "../utils/assetLoader";
+
 const MovieContext = createContext();
 
 function MovieProvider({ children }) {
-  const [movieData, setMovieData] = useState([]);
+  const [movieData, setMovieData] = useState(movieDataJson);
   const [searchQuery, setSearchQuery] = useState("");
 
   const addToBookmark = function (selectedMovieTitle) {
@@ -16,32 +16,6 @@ function MovieProvider({ children }) {
       )
     );
   };
-
-  useEffect(function () {
-    const processedMovieData = movieDataJson.map(function (movie) {
-      const processedThumbnail = {};
-
-      if (movie.thumbnail.trending) {
-        processedThumbnail.trending = {
-          small: getImageUrl(movie.thumbnail.trending.small),
-          large: getImageUrl(movie.thumbnail.trending.large),
-        };
-      }
-
-      processedThumbnail.regular = {
-        small: getImageUrl(movie.thumbnail.regular.small),
-        medium: getImageUrl(movie.thumbnail.regular.medium),
-        large: getImageUrl(movie.thumbnail.regular.large),
-      };
-
-      return {
-        ...movie,
-        thumbnail: processedThumbnail,
-      };
-    });
-
-    setMovieData(processedMovieData);
-  }, []);
 
   return (
     <MovieContext.Provider

@@ -23,6 +23,7 @@ function TrendingSection() {
 }
 
 function TrendingMovie({ movie }) {
+  console.log("trending", typeof movie.thumbnail.trending.small);
   const mobileSrc = movie.thumbnail.trending.small;
   const largeSrc = movie.thumbnail.trending.large;
 
@@ -31,10 +32,10 @@ function TrendingMovie({ movie }) {
       <PlayButtonWithOverlay />
 
       <picture>
-        <source media="(max-width: 767px)" srcSet={mobileSrc} />
+        <source media="(max-width: 767px)" srcSet={IMG_URL + mobileSrc} />
 
         <img
-          src={largeSrc}
+          src={IMG_URL + largeSrc}
           alt={movie.title + "Thumbnail"}
           className="rounded-lg h-full w-full trending-movie-img brightness-75"
         />

@@ -6,5 +6,5 @@ import eslint from "vite-plugin-eslint";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [tailwindcss(), react(), eslint()],
-  base: "/entertainment-web-app",
+  base: ProcessingInstruction.env.VITE_BASE_PATH || "/entertainment-web-app",
 });

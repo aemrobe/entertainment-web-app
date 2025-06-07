@@ -23,7 +23,6 @@ function TrendingSection() {
 }
 
 function TrendingMovie({ movie }) {
-  console.log("trending", typeof movie.thumbnail.trending.small);
   const mobileSrc = movie.thumbnail.trending.small;
   const largeSrc = movie.thumbnail.trending.large;
 

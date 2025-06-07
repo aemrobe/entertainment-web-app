@@ -1,11 +1,10 @@
-import { IMG_URL } from "../config/constants";
 import { useMovie } from "../Context/MovieContext";
 
 function SearchBox() {
   const { searchQuery, setSearchQuery } = useMovie();
 
   return (
-    <div className="mx-200 md:mx-[1.5625rem] my-300 md:my-400 flex space-x-200 md:space-x-300 items-center">
+    <div className="  mx-200 md:mx-[1.5625rem] 2xl:ml-[10.25rem] 2xl:mr-9 my-300 md:my-400 2xl:mt-0 2xl:mb-[2.5625rem] flex space-x-200 md:space-x-300 2xl:space-x-400 items-center">
       <label htmlFor="movie-search-input" className="">
         <img
           src={`/images/icon-search.svg`}

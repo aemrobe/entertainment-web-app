@@ -1,12 +1,11 @@
-import { IMG_URL } from "../config/constants";
 import { NavLink } from "react-router-dom";
 
 function Header() {
   const COMMON_NAV_ICON_CLASSES = `2xl:hover:text-softRed transition duration-100 w-200 md:w-5 h-200 md:h-5`;
 
   return (
-    <header className="2xl:z-40 2xl:fixed 2xl:left-[calc(50vw - 720px)]  bg-darkBlue 2xl:h-[60rem]">
-      <div className=" 2xl:h-full py-[1.125rem] px-200 md:p-5 container mx-auto  flex 2xl:items-center 2xl:flex-col 2xl:space-y-900 justify-between 2xl:justify-start">
+    <header className="2xl:z-40 2xl:fixed 2xl:left-[calc(50vw-688px)] 2xl:top-400  bg-darkBlue 2xl:h-[60rem] md:rounded-[0.625rem] 2xl:rounded-[1.25rem]">
+      <div className="2xl:h-full py-[1.125rem] px-200 md:p-5 2xl:py-[2.106rem] 2xl:px-[1.75rem] container mx-auto  flex 2xl:items-center 2xl:flex-col 2xl:space-y-900 justify-between 2xl:justify-start">
         <img
           src={`/images/logo.svg`}
           className="w-[1.5625rem] md:w-400 h-5 md:h-[1.6rem]"
@@ -14,7 +13,7 @@ function Header() {
         />
 
         <nav>
-          <ul className="flex space-x-300 2xl:space-x-0 2xl:space-y-8 2xl:flex-col md:space-x-400">
+          <ul className="flex space-x-300 2xl:space-x-0 2xl:space-y-500 2xl:flex-col md:space-x-400 ">
             <li className="2xl:mx-auto">
               <NavLink to="/">
                 {({ isActive }) => (
@@ -113,7 +112,7 @@ function Header() {
 
         <img
           src={`/images/image-avatar.png`}
-          className="w-300 md:w-400 h-300 md:h-400 border-2 border-white rounded-full 2xl:mt-auto"
+          className="w-300 md:w-400 2xl:w-500 h-300  md:h-400 2xl:h-500 border-2 border-white rounded-full 2xl:mt-auto"
           alt="profile"
         />
       </div>

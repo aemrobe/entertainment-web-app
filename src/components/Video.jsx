@@ -1,5 +1,3 @@
-import { IMG_URL } from "../config/constants";
-
 import BookmarkBtn from "./BookmarkBtn";
 import PlayButtonWithOverlay from "./PlayButtonWithOverlay";
 
@@ -36,7 +34,7 @@ function Video({ movie }) {
         <li className="bullet-point flex items-center">
           <span className="flex items-center space-x-100">
             <img
-              src={`${IMG_URL}${
+              src={`${
                 movie.category === "Movie"
                   ? "/images/icon-category-movie.svg"
                   : "/images/icon-category-tv.svg"

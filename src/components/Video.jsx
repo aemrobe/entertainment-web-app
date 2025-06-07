@@ -4,7 +4,7 @@ import BookmarkBtn from "./BookmarkBtn";
 import PlayButtonWithOverlay from "./PlayButtonWithOverlay";
 
 function Video({ movie }) {
-  const mobileSrc = movie.thumbnail.regular.mobile;
+  const mobileSrc = movie.thumbnail.regular.small;
   const tabletSrc = movie.thumbnail.regular.medium;
   const desktopSrc = movie.thumbnail.regular.large;
 

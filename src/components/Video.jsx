@@ -13,15 +13,15 @@ function Video({ movie }) {
       <div className="relative">
         <PlayButtonWithOverlay />
         <picture>
-          <source media="(max-width: 767px)" srcSet={IMG_URL + mobileSrc} />
+          <source media="(max-width: 767px)" srcSet={mobileSrc} />
 
           <source
             media="(min-width: 768px) and (max-width: 1339px)"
-            srcSet={IMG_URL + tabletSrc}
+            srcSet={tabletSrc}
           />
 
           <img
-            src={IMG_URL + desktopSrc}
+            src={desktopSrc}
             className="w-full rounded-lg mb-100"
             alt={`${movie.title} Thumbnail`}
           />

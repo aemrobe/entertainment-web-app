@@ -32,10 +32,10 @@ function TrendingMovie({ movie }) {
       <PlayButtonWithOverlay />
 
       <picture>
-        <source media="(max-width: 767px)" srcSet={IMG_URL + mobileSrc} />
+        <source media="(max-width: 767px)" srcSet={mobileSrc} />
 
         <img
-          src={IMG_URL + largeSrc}
+          src={largeSrc}
           alt={movie.title + "Thumbnail"}
           className="rounded-lg h-full w-full trending-movie-img brightness-75"
         />
@@ -46,7 +46,7 @@ function TrendingMovie({ movie }) {
 
         <li className="bullet-point flex items-center space-x-100">
           <img
-            src={`${IMG_URL}${
+            src={`${
               movie.category === "Movie"
                 ? "/images/icon-category-movie.svg"
                 : "/images/icon-category-tv.svg"

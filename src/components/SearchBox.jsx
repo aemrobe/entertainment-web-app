@@ -8,7 +8,7 @@ function SearchBox() {
     <div className="mx-200 md:mx-[1.5625rem] my-300 md:my-400 flex space-x-200 md:space-x-300 items-center">
       <label htmlFor="movie-search-input" className="">
         <img
-          src={`${IMG_URL}/images/icon-search.svg`}
+          src={`/images/icon-search.svg`}
           className="w-[1.125rem] md:w-300 h-[1.125rem] md:h-300"
           alt="search icon"
         />

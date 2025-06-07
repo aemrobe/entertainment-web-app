@@ -8,7 +8,7 @@ function Header() {
     <header className="2xl:z-40 2xl:fixed 2xl:left-[calc(50vw - 720px)]  bg-darkBlue 2xl:h-[60rem]">
       <div className=" 2xl:h-full py-[1.125rem] px-200 md:p-5 container mx-auto  flex 2xl:items-center 2xl:flex-col 2xl:space-y-900 justify-between 2xl:justify-start">
         <img
-          src={`${IMG_URL}/images/logo.svg`}
+          src={`/images/logo.svg`}
           className="w-[1.5625rem] md:w-400 h-5 md:h-[1.6rem]"
           alt="logo"
         />
@@ -112,7 +112,7 @@ function Header() {
         </nav>
 
         <img
-          src={`${IMG_URL}/images/image-avatar.png`}
+          src={`/images/image-avatar.png`}
           className="w-300 md:w-400 h-300 md:h-400 border-2 border-white rounded-full 2xl:mt-auto"
           alt="profile"
         />

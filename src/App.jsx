@@ -9,7 +9,7 @@ import Homepage from "./pages/Homepage";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/entertainment-web-app">
+      <BrowserRouter>
         <div className="border-2 border-lime-500 2xl:flex 2xl:container 2xl:max-w-[90rem] 2xl:mx-auto md:px-[1.5625rem] 2xl:px-[0rem] md:pt-[23px]">
           <Header />
           <Main>

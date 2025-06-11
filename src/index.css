@@ -112,13 +112,3 @@ body {
     transform: rotate(1turn);
   }
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  color: var(--color-white);
-}
-
-.attribution a {
-  color: rgba(255, 255, 255, 0.5);
-}

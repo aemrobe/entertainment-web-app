@@ -9,7 +9,7 @@ function TrendingSection() {
     <section className="mt-0.5 ml-200 md:ml-[1.5625rem]  2xl:ml-[10.25rem] ">
       <h2 className="text-xl md:text-[2rem] mb-200 md:mb-300 ">Trending</h2>
 
-      <div className="custom-scrollbar-hide snap-x snap-mandatory rounded-l-lg overflow-x-auto  grid grid-flow-col auto-cols-[15rem] md:auto-cols-[29.375rem] md:auto-rows-[14.375rem]  gap-x-200 md:gap-x-500  mb-300 md:mb-500">
+      <div className="custom-scrollbar-hide snap-x snap-mandatory rounded-l-lg overflow-x-auto  grid grid-flow-col auto-rows-[8.75rem] auto-cols-[15rem] md:auto-cols-[29.375rem] md:auto-rows-[14.375rem]  gap-x-200 md:gap-x-500  mb-300 md:mb-500">
         {movieData.map(
           (movie) =>
             movie.isTrending && (

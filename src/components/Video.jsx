@@ -26,7 +26,7 @@ function Video({ movie }) {
         </picture>
       </div>
 
-      <ul className="flex flex-wrap space-x-100 text-[0.6875rem] md:text-[0.8125rem]  text-white/75">
+      <ul className="mt-100 flex flex-wrap space-x-100 text-[0.6875rem] md:text-[0.8125rem]  text-white/75">
         <li>
           <p>{movie.year}</p>
         </li>

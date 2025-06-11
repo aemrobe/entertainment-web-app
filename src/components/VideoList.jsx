@@ -12,7 +12,7 @@ function VideoList({ title, movieData }) {
           : title}
       </h2>
 
-      <div className="grid xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-200 md:gap-x-[1.875rem] md:gap-y-300 2xl:gap-x-500">
+      <div className="grid  xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-200 md:gap-x-[1.875rem] md:gap-y-300 2xl:gap-x-500">
         {movieData.map((movie) => (
           <Video key={movie.title} movie={movie} />
         ))}

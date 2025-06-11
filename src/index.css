@@ -8,6 +8,8 @@
   --color-verydark-blue: #10141e;
   --color-dark-blue: #161d2f;
   --color-light-blue: #5a698f;
+  --color-light--2: #ececec;
+  --color-dark--1: #2d3439;
 
   /* Font Family */
   --font-ff-outfit: "Outfit", sans-serif;
@@ -32,6 +34,7 @@
   --color-varyDarkBlue: var(--color-verydark-blue);
   --color-darkBlue: var(--color-dark-blue);
   --color-lightBlue: var(--color-light-blue);
+  --color-dark1: var(--color-dark--1);
 
   /* Font Family */
   --font-sans: var(--font-ff-outfit);
@@ -89,4 +92,33 @@
 
 body {
   @apply bg-varyDarkBlue font-light leading-tight;
+}
+
+.spinner {
+  background: conic-gradient(#0000 10%, var(--color-light--2));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: rotate 1.5s infinite linear;
+}
+
+.spinnerFullpage {
+  border: 5px solid lime;
+  margin: 2.5rem;
+  height: calc(100vh - 5rem);
+  background-color: var(--color-dark--1);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.attribution a {
+  color: rgba(255, 255, 255, 0.5);
 }

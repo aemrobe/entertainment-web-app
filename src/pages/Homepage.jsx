@@ -1,4 +1,7 @@
 import SearchBox from "../components/SearchBox";
+import GradientDemo from "../components/Spinner";
+import Spinner from "../components/Spinner";
+import SpinnerFullPage from "../components/SpinnerFullPage";
 import TrendingSection from "../components/TrendingSection";
 import VideoList from "../components/VideoList";
 import { useMovie } from "../Context/MovieContext";

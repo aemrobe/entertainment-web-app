@@ -29,6 +29,8 @@ function MovieProvider({ children }) {
     [movieSearchTermFromUrl]
   );
 
+  useEffect(function () {}, []);
+
   const handleSearchMovies = function (e) {
     e.preventDefault();
 

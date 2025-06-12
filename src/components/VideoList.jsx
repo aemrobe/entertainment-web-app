@@ -2,13 +2,13 @@ import { useMovie } from "../Context/MovieContext";
 import Video from "./Video";
 
 function VideoList({ title, movieData }) {
-  const { searchQuery } = useMovie();
+  const { movieSearchTermFromUrl } = useMovie();
 
   return (
     <section className="mx-200 md:mx-[1.5625rem] 2xl:ml-[10.25rem] 2xl:mr-9">
       <h2 className="text-xl md:text-[2rem] leading-tight mb-300 2xl:mb-400">
-        {searchQuery.length > 0
-          ? `Found ${movieData.length} results for ${searchQuery}`
+        {movieSearchTermFromUrl.length > 0
+          ? `Found ${movieData.length} results for ${movieSearchTermFromUrl}`
           : title}
       </h2>
 

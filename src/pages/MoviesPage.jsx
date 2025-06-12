@@ -3,16 +3,18 @@ import VideoList from "../components/VideoList";
 import { useMovie } from "../Context/MovieContext";
 
 function MoviesPage() {
-  const { movieData, searchQuery } = useMovie();
+  const { movieData, movieSearchTermFromUrl } = useMovie();
 
   const moviesCategoriesOnly = movieData.filter(
     (movie) => movie.category === "Movie"
   );
 
   const searchedMovies =
-    searchQuery.length > 0
+    movieSearchTermFromUrl.length > 0
       ? moviesCategoriesOnly.filter((movie) =>
-          movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+          movie.title
+            .toLowerCase()
+            .includes(movieSearchTermFromUrl.toLowerCase())
         )
       : moviesCategoriesOnly;
 

@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import SpinnerFullPage from "./components/SpinnerFullPage";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import { MovieProvider } from "./Context/MovieContext";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const MoviesPage = lazy(() => import("./pages/MoviesPage"));
@@ -15,19 +16,21 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Suspense fallback={<SpinnerFullPage />}>
-          <Wrapper>
-            <Header />
-            <Main>
-              <Routes>
-                <Route path="/" element={<Homepage />}></Route>
-                <Route path="Movies" element={<MoviesPage />}></Route>
-                <Route path="TVSeries" element={<TvSeriesPage />}></Route>
-                <Route path="Bookmark" element={<BookmarkPage />}></Route>
-              </Routes>
-            </Main>
-          </Wrapper>
-        </Suspense>
+        <MovieProvider>
+          <Suspense fallback={<SpinnerFullPage />}>
+            <Wrapper>
+              <Header />
+              <Main>
+                <Routes>
+                  <Route path="/" element={<Homepage />}></Route>
+                  <Route path="Movies" element={<MoviesPage />}></Route>
+                  <Route path="TVSeries" element={<TvSeriesPage />}></Route>
+                  <Route path="Bookmark" element={<BookmarkPage />}></Route>
+                </Routes>
+              </Main>
+            </Wrapper>
+          </Suspense>
+        </MovieProvider>
       </BrowserRouter>
       <Footer />
     </>

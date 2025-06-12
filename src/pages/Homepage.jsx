@@ -4,19 +4,21 @@ import VideoList from "../components/VideoList";
 import { useMovie } from "../Context/MovieContext";
 
 function Homepage() {
-  const { movieData, searchQuery } = useMovie();
+  const { movieData, movieSearchTermFromUrl } = useMovie();
 
   const searchedMovies =
-    searchQuery.length > 0
+    movieSearchTermFromUrl.length > 0
       ? movieData.filter((movie) =>
-          movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+          movie.title
+            .toLowerCase()
+            .includes(movieSearchTermFromUrl.toLowerCase())
         )
       : movieData;
 
   return (
     <>
       <SearchBox />
-      {searchQuery.length === 0 && <TrendingSection />}
+      {movieSearchTermFromUrl.length === 0 && <TrendingSection />}
       <VideoList title={"Recommended for you"} movieData={searchedMovies} />
     </>
   );

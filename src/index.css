@@ -112,3 +112,17 @@ body {
     transform: rotate(1turn);
   }
 }
+
+.blur-load {
+  background-size: cover;
+  background-position: center;
+}
+
+.blur-load > img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.blur-load.loaded > img {
+  opacity: 1;
+}
